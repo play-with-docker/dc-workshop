@@ -52,7 +52,7 @@ angular.module('yapp')
     var p = {
 
       assignSession: function() {
-       return $http.post('https://labs.play-with-docker.com/workshops/ec3610ac-e21a-41f1-8cf3-5700790a4737/session', {}, {headers: {'Accept': 'application/json'}}).then(function(response) {
+       return $http.post('https://labs.play-with-docker.com/workshops/4e801834-507c-4100-b471-220b39ce0303/session', {}, {headers: {'Accept': 'application/json'}}).then(function(response) {
             return response.data.session_id;
         });
       },
