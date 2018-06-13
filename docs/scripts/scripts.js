@@ -185,7 +185,7 @@ angular.module('yapp')
   .controller('LoginCtrl', ["$scope", "$location", "pwdService", "$stateParams", "$window", function($scope, $location, pwdService, $stateParams, $window) {
 
     if (!$stateParams.aliId) {
-      $window.location.href = 'https://dockr.ly/ee-workshop-test';
+      $window.location.href = 'https://dockr.ly/dc18workshop';
       return;
     }
 
