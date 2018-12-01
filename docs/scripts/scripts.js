@@ -52,7 +52,7 @@ angular.module('yapp')
     var p = {
 
       assignSession: function() {
-       return $http.post('https://labs.play-with-docker.com/workshops/4e801834-507c-4100-b471-220b39ce0303/session', {}, {headers: {'Accept': 'application/json'}}).then(function(response) {
+       return $http.post('https://workshop.play-with-docker.com/workshops/4e801834-507c-4100-b471-220b39ce0303/session', {}, {headers: {'Accept': 'application/json'}}).then(function(response) {
             return response.data.session_id;
         });
       },
@@ -62,7 +62,7 @@ angular.module('yapp')
         if (!sessionId) {
           return new Promise(function(resolve,reject){reject()});
         }
-        return $http.get('https://labs.play-with-docker.com/sessions/' + sessionId).then(function(response) {
+        return $http.get('https://workshop.play-with-docker.com/sessions/' + sessionId).then(function(response) {
           response.data.hostname = 'workshop.play-with-docker.com';
           return response.data;
         });
@@ -72,7 +72,7 @@ angular.module('yapp')
       init: function(session) {
         // init the pwd session
         return  new Promise(function(resolve, reject) {
-          pwd.init(session.id, {baseUrl: 'https://labs.play-with-docker.com'}, function() {
+          pwd.init(session.id, {baseUrl: 'https://workshop.play-with-docker.com'}, function() {
             resolve();
           });
         });
